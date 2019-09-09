@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     
     var greet: String = ""
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+    @IBAction func textFieldUpdate(_ sender: UITextField) {
+        label.text = greet + textfield.text!
+    }
+    
     @IBAction func english(_ sender: Any) {
         greet = "Hello "
         writeTextLabel(word: greet)
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
     }
     
     func writeTextLabel(word: String) {
-        
         label.text = greet + textfield.text!
     }
 }

@@ -23,6 +23,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="qTj-i2-Qvc"/>
+                                    <action selector="textFieldUpdate:" destination="BYZ-38-t0r" eventType="editingChanged" id="2z5-AY-KiQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-PV-Pqz">
                                 <rect key="frame" x="100" y="109" width="55" height="30"/>
