@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="External_apps___L3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Rb-Ga-8U0">
+                                <rect key="frame" x="20" y="74" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="browserTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="gDo-IW-el0"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJJ-iN-092">
+                                <rect key="frame" x="158.5" y="124" width="97" height="30"/>
+                                <state key="normal" title="Open Browser"/>
+                                <connections>
+                                    <action selector="openBrowserBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1J-1b-ntz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-7A-iNj">
+                                <rect key="frame" x="168.5" y="234" width="76" height="30"/>
+                                <state key="normal" title="Send Email"/>
+                                <connections>
+                                    <action selector="sendEmailBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8y-KO-MZV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-0L-xeC">
+                                <rect key="frame" x="159.5" y="294" width="95" height="30"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCameraBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61y-c5-bgz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFJ-mf-eMU">
+                                <rect key="frame" x="20" y="354" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="phoneNumbTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="QRt-Vq-3nP"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj8-tX-W8o">
+                                <rect key="frame" x="170.5" y="404" width="73" height="30"/>
+                                <state key="normal" title="Create call"/>
+                                <connections>
+                                    <action selector="createCallBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUY-XX-UMh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="II7-eg-gxf">
+                                <rect key="frame" x="20" y="184" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTxt:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Bb2-da-lui"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YFJ-mf-eMU" firstAttribute="top" secondItem="5aw-0L-xeC" secondAttribute="bottom" constant="30" id="0qw-fG-YsD"/>
+                            <constraint firstItem="BJJ-iN-092" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158.44" id="2KX-d0-gcU"/>
+                            <constraint firstItem="Yj8-tX-W8o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170.44" id="3n5-BN-X5J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yj8-tX-W8o" secondAttribute="trailing" constant="170.56" id="5rD-Vx-RhI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="II7-eg-gxf" secondAttribute="trailing" constant="20" id="7Ey-ey-PMp"/>
+                            <constraint firstItem="Yj8-tX-W8o" firstAttribute="top" secondItem="YFJ-mf-eMU" secondAttribute="bottom" constant="20" id="7Lc-iI-V1d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YFJ-mf-eMU" secondAttribute="trailing" constant="20" id="Ayq-CG-uES"/>
+                            <constraint firstItem="5aw-0L-xeC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159.44" id="CYE-ix-VZm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Rb-Ga-8U0" secondAttribute="trailing" constant="20" id="D72-Mc-slk"/>
+                            <constraint firstItem="BJJ-iN-092" firstAttribute="top" secondItem="5Rb-Ga-8U0" secondAttribute="bottom" constant="20" id="ILp-oN-FU3"/>
+                            <constraint firstItem="II7-eg-gxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nd5-hQ-t7g"/>
+                            <constraint firstItem="II7-eg-gxf" firstAttribute="top" secondItem="BJJ-iN-092" secondAttribute="bottom" constant="30" id="PxQ-3x-QkF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BJJ-iN-092" secondAttribute="trailing" constant="158.56" id="QYY-N7-eCD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5aw-0L-xeC" secondAttribute="trailing" constant="159.56" id="czA-Gb-CvY"/>
+                            <constraint firstItem="QoQ-7A-iNj" firstAttribute="top" secondItem="II7-eg-gxf" secondAttribute="bottom" constant="20" id="f4G-03-RzN"/>
+                            <constraint firstItem="YFJ-mf-eMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hep-4a-qO6"/>
+                            <constraint firstItem="QoQ-7A-iNj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168.44" id="qmL-5a-9DH"/>
+                            <constraint firstItem="5Rb-Ga-8U0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="yGP-g6-dJq"/>
+                            <constraint firstItem="5aw-0L-xeC" firstAttribute="top" secondItem="QoQ-7A-iNj" secondAttribute="bottom" constant="30" id="z8m-6i-pv9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QoQ-7A-iNj" secondAttribute="trailing" constant="169.56" id="zOE-xj-XNX"/>
+                            <constraint firstItem="5Rb-Ga-8U0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zre-Fw-0St"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="browserTxt" destination="5Rb-Ga-8U0" id="nWJ-1P-E1p"/>
+                        <outlet property="emailTxt" destination="II7-eg-gxf" id="zhf-cS-1oK"/>
+                        <outlet property="phoneNumberTxt" destination="YFJ-mf-eMU" id="zYf-J3-X9W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
