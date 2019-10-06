@@ -10,18 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var points: UILabel!
-    var point: Int = 0
+    @IBOutlet weak var points: UILabel! // Define our Label
+    var point: Int = 0 // Variable to count our points
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func button(_ sender: Any) {
+    @IBAction func button(_ sender: Any) { // Called every time we click out Button
         print("Pressed")
         point += 1
-        points.text = "You have made " + String(point) + " points"
+        points.text = "You have made " + String(point) + " points" // Show a text in the Label with the updated points
     }
     
 }
