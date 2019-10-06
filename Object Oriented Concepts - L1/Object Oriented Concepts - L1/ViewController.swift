@@ -15,18 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func ex() {
-        let h1 = house()
+        let h1 = house() // create the object h1
         let h2 = house()
         let h3 = house()
-        h1.getWindow()
-        let g1 : ballSport = ballSport()
+        h1.getWindow()  // call methode
+        let g1 : ballSport = ballSport() // create the object g1
     }
     
 }
 
 class house {
     var window = 1
-    func getWindow() {
+    func getWindow() { 
         print(window)
     }
     func addWindow() {
@@ -41,27 +41,25 @@ class sport {
     var points = 0
 }
 
-class ballSport : sport {
-    var name = "Tennis"
+class ballSport : sport { // inheritance/extends sport
+    var name = "Tennis" // defines a variable
 }
 
-protocol ourInterface {
-    var name : String {get set}
+protocol ourInterface { // this is a interface
+    var name : String {get set} // abstract variables
     var lastName : String {get set}
     
-    static func someTypeMethod()
+    static func someTypeMethod() //abstract methodes
 }
 
-class fromOurInterface : ourInterface {
+class fromOurInterface : ourInterface { // implements the interface
     var name: String = ""
     
     var lastName: String = ""
     
     static func someTypeMethod() {
         print("Hello")
-    }
-    
-    
+    }    
 }
 
 
