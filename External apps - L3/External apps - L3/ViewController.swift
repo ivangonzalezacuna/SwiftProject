@@ -18,16 +18,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var browserTxt: UITextField!
 
     @IBAction func openBrowserBtn(_ sender: Any) {
-        let link = browserTxt.text!
-        let url = URL(string: link)!
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        let link = browserTxt.text! // gets the text out of the textfield
+        let url = URL(string: link)! // creates a URl 
+        UIApplication.shared.open(url, options: [:], completionHandler: nil) // opens the browser 
     }
     
-    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var emailTxt: UITextField! // weak means
     
     @IBAction func sendEmailBtn(_ sender: Any) {
-        let email = browserTxt.text!
-        if let url = URL(string: "mailto:\(email)") {
+        let email = browserTxt.text!   // get the email adress
+        if let url = URL(string: "mailto:\(email)") { // open the email application 
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url)
             } else {
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func createCallBtn(_ sender: Any) {
         let number = browserTxt.text!
         let url: NSURL = URL(string: "tel://\(number)")! as NSURL
-        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil) // open the call application
     }
 }
 
