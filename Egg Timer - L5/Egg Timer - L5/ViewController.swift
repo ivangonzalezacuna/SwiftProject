@@ -11,9 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var picker: UIPickerView! // decleares the UIPicker/Spinningweel
     
-    var array: [[String]] = [[String]]()
+    var array: [[String]] = [[String]]() // 2D Array 
     var minutesArray: [String] = [String]()
     var secondsArray: [String] = [String]()
     var minutes: [Int] = [Int]()
@@ -24,8 +24,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        for i in 0...59 {
-            secondsArray.append(String(i) + " seconds")
+        for i in 0...59 { // for loop counts from 0 to59
+            secondsArray.append(String(i) + " seconds") // appends the values in the array
             minutesArray.append(String(i) + " minutes")
             seconds.append(i)
             minutes.append(i)
@@ -33,8 +33,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         array.append(minutesArray)
         array.append(secondsArray)
 
-        self.picker.delegate = self
-        self.picker.dataSource = self
+        self.picker.delegate = self //????????????????????
+        self.picker.dataSource = self //????????????????
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +43,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
-    }
+    } ////////??????????????????'
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if (component == 0) {
