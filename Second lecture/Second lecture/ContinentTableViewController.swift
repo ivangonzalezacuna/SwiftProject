@@ -17,41 +17,43 @@ class ContinentTableViewController: UITableViewController {
                       ("North America",Int64(579024000)),
                       ("South America",Int64(422535000)),
                       ("Asia",Int64(4581757408)),
-                      ("Europe",Int64(738849000))]
+                      ("Europe",Int64(738849000))] // Array with the names of the continents and their population
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell") // To register out TableView
         
     }
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // Executed when we select a row
         
-        let result = indexPath.row
+        let result = indexPath.row // Integer with the number of the row selected
         print(continents[result].1)
         
         let textAlert = "Population of " + continents[result].0 + " is " + String(continents[result].1)
+        // String with the name of the continent (Column 0), and its population (Column 1)
         
         let alert = UIAlertController(title: continents[result].0, message: textAlert, preferredStyle: .alert)
+        // Creation of an Alert Dialog pop-up with a Title, a Message and a Style
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        // Adding an action to that alert. In that case, a button with and "Ok"
         
         self.present(alert, animated: true)
-        
-        // Implement the dialog here by using UIALertController
+        // Show the alerrt on the screen
     }
     
     // Return number of sections in the table view here
     
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 1
+        return 1 // Number of columns we want to show
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return continents.count
+        return continents.count // Number of rows we are going to show
     }
     
 
@@ -61,7 +63,7 @@ class ContinentTableViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
-        cell.textLabel?.text = self.continents[indexPath.row].0
+        cell.textLabel?.text = self.continents[indexPath.row].0 // Set the text of each cell
 
         return cell
     }
