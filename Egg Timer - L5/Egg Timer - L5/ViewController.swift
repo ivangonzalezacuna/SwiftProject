@@ -33,8 +33,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         array.append(minutesArray)
         array.append(secondsArray)
 
-        self.picker.delegate = self //????????????????????
-        self.picker.dataSource = self //????????????????
+        self.picker.delegate = self 
+        self.picker.dataSource = self 
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +43,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
-    } ////////??????????????????'
+    } 
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if (component == 0) {
@@ -62,8 +62,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is ViewController2 {
-            let vc = segue.destination as? ViewController2
+        if segue.destination is ViewController2 {  
+            let vc = segue.destination as? ViewController2 // update the values from another class
             
             vc?.minutes = minutes[picker.selectedRow(inComponent: 0)]
             vc?.seconds = seconds[picker.selectedRow(inComponent: 1)]
@@ -82,9 +82,9 @@ class ViewController2 : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textLabel.text! = ""
-        let utterance = AVSpeechUtterance(string: "Timer started")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        utterance.rate = 0.1
+        let utterance = AVSpeechUtterance(string: "Timer started") 
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB") // sound
+        utterance.rate = 0.1 // speed of speaker
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
@@ -103,7 +103,7 @@ class ViewController2 : UIViewController {
             
             let synthesizer = AVSpeechSynthesizer()
             synthesizer.speak(utterance)
-            _ = navigationController?.popViewController(animated: true)
+            _ = navigationController?.popViewController(animated: true) // back to the last activtiy
         }
         seconds -= 1
         if seconds == -1 {
