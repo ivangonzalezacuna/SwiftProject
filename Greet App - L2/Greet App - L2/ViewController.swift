@@ -10,16 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var textfield: UITextField! // Variable for out TextField
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UILabel! // Variable for out Label
     
     var greet: String = ""
     
 
     @IBAction func textFieldUpdate(_ sender: UITextField) {
-        label.text = greet + textfield.text!
+        label.text = greet + textfield.text! // When the text in the TextField changes, then we update the text in the Label
     }
+    
+    // Depending on the button we click. The 'greet' var updates to the corresponding value, and we call a function to show
+    // the new greeting message
     
     @IBAction func english(_ sender: Any) {
         greet = "Hello "
@@ -41,7 +44,7 @@ class ViewController: UIViewController {
         writeTextLabel(word: greet)
     }
     
-    func writeTextLabel(word: String) {
+    func writeTextLabel(word: String) { // Function to update the Label
         label.text = greet + textfield.text!
     }
 }
